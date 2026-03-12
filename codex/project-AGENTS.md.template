@@ -1,0 +1,86 @@
+# .codex/AGENTS.md
+# Project-specific instructions — place this in your repo root's .codex/ folder.
+# Inherits global ~/.codex/AGENTS.md; settings here take precedence.
+
+## Project: <YOUR PROJECT NAME>
+## Stack: <e.g. Node.js 20 + TypeScript + PostgreSQL + Redis>
+## Team conventions: <link to contributing guide>
+
+---
+
+## Test Commands
+```bash
+# Run full test suite
+pnpm test                    # or: npm test | make test | go test ./... | pytest
+
+# Run a single test file
+pnpm test src/auth/auth.test.ts
+
+# Run with coverage
+pnpm test --coverage
+
+# Lint
+pnpm lint
+
+# Type check
+pnpm typecheck
+```
+
+> Always run tests after every code change. Run lint before proposing a PR.
+
+---
+
+## Project Structure
+```
+src/
+  api/          # HTTP route handlers
+  services/     # Business logic layer
+  repositories/ # Database access layer
+  models/       # Domain types and schemas
+  utils/        # Shared utilities
+  config/       # Environment configuration
+tests/
+  unit/         # Unit tests (mirror src/ structure)
+  integration/  # Integration tests (DB, external APIs)
+  e2e/          # End-to-end tests
+```
+
+---
+
+## Database
+- ORM/query builder: <e.g. Prisma | TypeORM | Drizzle | SQLAlchemy | GORM>
+- Never run migrations without explicit approval.
+- Migration command: `pnpm db:migrate`
+- Check migration status: `pnpm db:status`
+- Never modify existing migrations — always add new ones.
+
+---
+
+## Environment
+- Required env vars: `DATABASE_URL`, `REDIS_URL`, `JWT_SECRET`, `API_KEY`
+- Use `.env.local` for local overrides (gitignored).
+- Never commit `.env` files.
+
+---
+
+## PR / Commit Standards
+- Commit format: `<type>(scope): description` (Conventional Commits)
+  - Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`
+- PRs need: passing CI, 1 reviewer approval, no unresolved comments.
+- Do not `git push` — propose changes for engineer review first.
+
+---
+
+## Secrets and Security
+- All secrets via environment variables only.
+- Use `process.env.SECRET` — never hardcode.
+- Parameterize all SQL queries — zero string concatenation in queries.
+- Never log request bodies that may contain credentials.
+
+---
+
+## Known Gotchas
+<!-- Add project-specific traps here, e.g.: -->
+<!-- - The `UserService` is a singleton — do not instantiate directly, use DI. -->
+<!-- - Redis keys have a 24h TTL by default — don't assume persistence. -->
+<!-- - The `/api/v1` prefix is handled by the nginx config, not the app router. -->
