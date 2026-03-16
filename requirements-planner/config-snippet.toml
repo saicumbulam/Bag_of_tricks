@@ -1,0 +1,45 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# ADD THIS TO YOUR ~/.codex/config.toml
+# Requirements Planning — Agent Roles & Skill Registration
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Enable required features ──────────────────────────────────────────────────
+[features]
+multi_agent = true     # Required for parallel planning agents
+skills      = true     # Required for $implement-feature skill
+
+# ── Agent limits for planning workflows ───────────────────────────────────────
+[agents]
+max_threads             = 6
+max_depth               = 2
+job_max_runtime_seconds = 1800
+
+# ── Requirements Analyst — parses and structures requirements ─────────────────
+[agents.requirements-analyst]
+description         = "Reads and structures requirements from any format: PRD, Jira ticket, user story, RFC, or informal description. Clarifies ambiguities and produces a precise requirements summary ready for engineering planning."
+config_file         = "~/.codex/agents/requirements-analyst.toml"
+nickname_candidates = ["Analyst", "Clarity", "Iris"]
+
+# ── Codebase Mapper — maps affected files and structure ───────────────────────
+[agents.codebase-mapper]
+description         = "Maps codebase areas relevant to a feature: entry points, services, data layer, tests, utilities. Produces a precise file inventory for implementation planning."
+config_file         = "~/.codex/agents/codebase-mapper.toml"
+nickname_candidates = ["Scout", "Atlas", "Lens"]
+
+# ── Risk Assessor — finds blockers and risks upfront ─────────────────────────
+[agents.risk-assessor]
+description         = "Identifies technical risks, blockers, and unknowns for a planned feature: breaking changes, data risks, security surface, performance concerns, and missing dependencies."
+config_file         = "~/.codex/agents/risk-assessor.toml"
+nickname_candidates = ["Sentinel", "Argus", "Shield"]
+
+# ── Patterns Finder — discovers reusable conventions ─────────────────────────
+[agents.patterns-finder]
+description         = "Finds existing patterns, utilities, and conventions in the codebase that a new feature should follow: validation, error handling, auth, response shape, test structure."
+config_file         = "~/.codex/agents/patterns-finder.toml"
+nickname_candidates = ["Lens", "Mirror", "Echo"]
+
+# ── Skill Registration (if not auto-discovered) ───────────────────────────────
+# Uncomment if you placed the skill outside ~/.codex/skills/
+# [[skills.config]]
+# path    = "~/.codex/skills/implement-feature/SKILL.md"
+# enabled = true
