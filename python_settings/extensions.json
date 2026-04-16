@@ -1,0 +1,24 @@
+{
+    "recommendations": [
+        // ── Obsidian-like Markdown experience ──
+        "foam.foam-vscode",                    // [[wiki-links]], backlinks, graph view, daily notes
+        "yzhang.markdown-all-in-one",          // TOC, table formatting, shortcuts, list continuation
+        "bierner.markdown-preview-github-styles", // GitHub-flavored preview (clean like Obsidian)
+        "bierner.markdown-checkbox",           // Clickable checkboxes in preview
+        "bierner.markdown-emoji",              // :emoji: support in preview
+        "bierner.markdown-footnotes",          // Footnote rendering in preview
+        "bierner.markdown-mermaid",            // Mermaid diagram rendering in preview
+
+        // ── Shell / Bash ──
+        "timonwong.shellcheck",                // Real-time bash linting via ShellCheck
+
+        // ── Already installed (kept for team sync) ──
+        "charliermarsh.ruff",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "pkief.material-icon-theme",
+        "gruntfuggly.todo-tree"
+    ]
+}

@@ -1,0 +1,914 @@
+{
+    // =========================================================================
+    //  EDITOR — Typing, display, and feel
+    // =========================================================================
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', Menlo, Monaco, monospace",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 1.6,
+    "editor.letterSpacing": 0.3,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 2,
+    "editor.cursorSurroundingLines": 8,
+    "editor.smoothScrolling": true,
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.roundedSelection": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.renderLineHighlight": "all",
+    "editor.renderControlCharacters": true,
+    "editor.scrollBeyondLastLine": false,
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [
+        88,
+        100,
+        120
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.trimAutoWhitespace": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.indentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.linkedEditing": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 6,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": "multiFile",
+    "editor.inlayHints.enabled": "onUnlessPressed",
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "onHover",
+    "editor.suggestSelection": "first",
+    "editor.suggest.preview": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.quickSuggestionsDelay": 10,
+    "editor.hover.delay": 250,
+    "editor.hover.sticky": true,
+    "editor.accessibilitySupport": "off",
+    // Save / format / quick-fix
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.autoSaveWhenNoErrors": false,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    // Diff editor
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.wordWrap": "on",
+    // =========================================================================
+    //  WORKBENCH — Layout, theme, tabs
+    // =========================================================================
+    "workbench.colorTheme": "Dark 2026",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "Default",
+    "workbench.startupEditor": "none",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 12,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.closeEmptyGroups": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.tree.indent": 14,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.activityBar.location": "default",
+    "workbench.sideBar.location": "left",
+    "workbench.panel.defaultLocation": "bottom",
+    "workbench.panel.opensMaximized": "preserve",
+    "workbench.layoutControl.enabled": true,
+    "workbench.layoutControl.type": "toggles",
+    "workbench.settings.editor": "json",
+    "workbench.reduceMotion": "off",
+    "workbench.commandPalette.history": 100,
+    // Window chrome
+    "window.titleBarStyle": "custom",
+    "window.commandCenter": true,
+    "window.density.editorTabHeight": "compact",
+    "window.title": "${activeEditorShort}${separator}${rootName}${separator}${activeRepositoryBranchName}",
+    "window.newWindowDimensions": "inherit",
+    "window.confirmBeforeClose": "keyboardOnly",
+    "window.restoreWindows": "all",
+    "window.autoDetectColorScheme": false,
+    // Breadcrumbs & outline
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.filePath": "on",
+    "breadcrumbs.symbolPath": "on",
+    "outline.showVariables": false,
+    "outline.problems.enabled": true,
+    // =========================================================================
+    //  FILES — Exclusions, encoding, watchers
+    // =========================================================================
+    "files.eol": "\n",
+    "files.encoding": "utf8",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true,
+        "**/.ipynb_checkpoints": true,
+        "**/*.pyc": true,
+        "**/.tox": true,
+        "**/.coverage": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.venv/**": true,
+        "**/__pycache__/**": true,
+        "**/.mypy_cache/**": true,
+        "**/.ruff_cache/**": true,
+        "**/build/**": true,
+        "**/dist/**": true
+    },
+    // =========================================================================
+    //  EXPLORER
+    // =========================================================================
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "explorer.sortOrder": "default",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js, ${capture}.d.ts.map, ${capture}.d.ts, ${capture}.js.map",
+        "*.tsx": "${capture}.ts, ${capture}.js",
+        "*.py": "${capture}.pyi, ${capture}_test.py, test_${capture}.py",
+        "*.ipynb": "${capture}.py",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .npmrc, .nvmrc",
+        "tsconfig.json": "tsconfig.*.json",
+        "pyproject.toml": "poetry.lock, uv.lock, setup.cfg, setup.py, requirements*.txt, MANIFEST.in, .python-version, ruff.toml, mypy.ini, .pre-commit-config.yaml, tox.ini",
+        "Dockerfile": "docker-compose*.yml, .dockerignore",
+        "README.md": "CHANGELOG.md, CONTRIBUTING.md, LICENSE*, CODE_OF_CONDUCT.md, SECURITY.md"
+    },
+    // =========================================================================
+    //  SEARCH
+    // =========================================================================
+    "search.smartCase": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
+    "search.showLineNumbers": true,
+    "search.defaultViewMode": "tree",
+    "search.followSymlinks": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/*.lock": true,
+        "**/*.min.js": true,
+        "**/*.map": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true
+    },
+    // =========================================================================
+    //  TERMINAL
+    // =========================================================================
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo, monospace",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.scrollback": 20000,
+    "terminal.integrated.copyOnSelection": false,
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.enableVisualBell": true,
+    "accessibility.signals.terminalBell": {
+        "sound": "off"
+    },
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+    "terminal.integrated.shellIntegration.history": 500,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.suggest.inlineSuggestion": "alwaysOnTop",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.tabs.showActions": "always",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.minimumContrastRatio": 4.5,
+    "terminal.integrated.altClickMovesCursor": true,
+    "terminal.integrated.confirmOnKill": "editor",
+    // =========================================================================
+    //  PYTHON / PYLANCE — Tuned for serious productivity
+    // =========================================================================
+    // Type checking & analysis ------------------------------------------------
+    "python.analysis.typeCheckingMode": "basic", // bump to "standard" for stricter catches
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.indexing": true,
+    "python.analysis.userFileIndexingLimit": 5000,
+    "python.analysis.diagnosticMode": "openFilesOnly", // "workspace" if you want project-wide errors
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "error",
+        "reportUnusedImport": "warning",
+        "reportUnusedVariable": "warning",
+        "reportUnusedClass": "warning",
+        "reportUnusedFunction": "warning",
+        "reportDuplicateImport": "warning",
+        "reportImplicitStringConcatenation": "warning",
+        "reportDeprecated": "warning",
+        "reportInvalidTypeVarUse": "warning",
+        "reportMissingTypeStubs": "none"
+    },
+    // Auto-import depth — deep-index common libs so `pd.DataFrame`, `plt.subplots`,
+    // `nn.Module`, etc. show up as importable symbols instantly.
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "sklearn",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "matplotlib",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "scipy",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "numpy",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "pandas",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "torch",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "tensorflow",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "transformers",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "django",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "fastapi",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "flask",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "pydantic",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "anthropic",
+            "depth": 3,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "openai",
+            "depth": 3,
+            "includeAllSymbols": true
+        }
+    ],
+    // Completion ergonomics ---------------------------------------------------
+    "python.analysis.completeFunctionParens": true, // inserts () with signature
+    "python.analysis.autoFormatStrings": true, // typing {} auto-prepends f"
+    "python.analysis.importFormat": "absolute",
+    "python.analysis.gotoDefinitionInStringLiteral": true,
+    "python.analysis.enableColorPicker": true,
+    "python.analysis.fixAll": [
+        "source.unusedImports"
+    ],
+    "python.analysis.enablePytestSupport": true,
+    "python.analysis.supportDocstringTemplate": true, // Enter after """ drops a template
+    "python.analysis.supportRestructuredText": true,
+    "python.analysis.aiCodeActions": {
+        "implementAbstractClasses": true,
+        "generateSymbol": true,
+        "convertFormatString": true
+    },
+    // Inlay hints — tune down if too busy
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
+    // Runtime / terminal / envs ----------------------------------------------
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.focusAfterLaunch": true,
+    "python.terminal.shellIntegration.enabled": true,
+    "python.terminal.useEnvFile": true,
+    "python.envFile": "${workspaceFolder}/.env",
+    // Python Environments extension (uv-aware, blazing-fast env management)
+    "python-envs.alwaysUseUv": true,
+    "python-envs.terminal.showActivateButton": true,
+    "python-envs.terminal.autoActivationType": "command",
+    // Testing — pytest --------------------------------------------------------
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": [
+        "-v",
+        "--tb=short",
+        "--color=yes",
+        "--strict-markers",
+        "--strict-config"
+    ],
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "testing.automaticallyOpenPeekView": "failureInVisibleDocument",
+    "testing.followRunningTest": true,
+    "testing.defaultGutterClickAction": "run",
+    "testing.showCoverageInExplorer": true,
+    "testing.coverageToolbarEnabled": true,
+    "testing.saveBeforeTest": true,
+    // REPL / interactive -----------------------------------------------------
+    "python.REPL.sendToNativeREPL": true,
+    "python.REPL.enableREPLSmartSend": true,
+    "python.REPL.provideVariables": true,
+    // Debugger (debugpy) -----------------------------------------------------
+    "debugpy.debugJustMyCode": false, // step into libs; flip to true for quieter debug
+    "debugpy.showPythonInlineValues": true,
+    // [python] — formatter/linter via Ruff extension -------------------------
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.rulers": [
+            88,
+            100
+        ],
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true
+    },
+    // Ruff extension settings ------------------------------------------------
+    "ruff.nativeServer": "on", // faster Rust-based server
+    "ruff.importStrategy": "fromEnvironment", // use project's ruff if installed
+    "ruff.organizeImports": true,
+    "ruff.fixAll": true,
+    "ruff.codeAction.disableRuleComment": {
+        "enable": true
+    },
+    "ruff.codeAction.fixViolation": {
+        "enable": true
+    },
+    // =========================================================================
+    //  JUPYTER NOTEBOOKS — with autoreload, clean diffs
+    // =========================================================================
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "jupyter.interactiveWindow.textEditor.autoMoveToNextCell": true,
+    "jupyter.interactiveWindow.textEditor.autoAddNewCell": true,
+    "jupyter.themeMatplotlibPlots": true,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "jupyter.runStartupCommands": [
+        "%load_ext autoreload",
+        "%autoreload 2"
+    ],
+    "notebook.lineNumbers": "on",
+    "notebook.output.wordWrap": true,
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 50,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports.ruff": "explicit"
+    },
+    "notebook.stickyScroll.enabled": true,
+    "notebook.diff.ignoreMetadata": true,
+    "notebook.diff.ignoreOutputs": true,
+    "notebook.variablesView": true,
+    // =========================================================================
+    //  GIT / GITLENS
+    // =========================================================================
+    "git.autofetch": true,
+    "git.autofetchPeriod": 180,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.suggestSmartCommit": false,
+    "git.openRepositoryInParentFolders": "always",
+    "git.pruneOnFetch": true,
+    "git.fetchOnPull": true,
+    "git.pullBeforeCheckout": true,
+    "git.rebaseWhenSync": true,
+    "git.mergeEditor": true,
+    "git.branchProtection": [
+        "main",
+        "master",
+        "develop"
+    ],
+    "git.branchProtectionPrompt": "alwaysPrompt",
+    "git.showPushSuccessNotification": true,
+    "git.inputValidation": true,
+    "git.inputValidationSubjectLength": 72,
+    "git.inputValidationLength": 100,
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
+    "scm.defaultViewMode": "tree",
+    "scm.diffDecorations": "all",
+    "scm.inputMaxLineCount": 12,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.defaultDateStyle": "relative",
+    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
+    "gitlens.views.commits.files.layout": "tree",
+    "gitlens.graph.layout": "panel",
+    // =========================================================================
+    //  AI / CHAT
+    // =========================================================================
+    "chat.agent.enabled": true,
+    "chat.agent.maxRequests": 75,
+    "chat.editing.autoAcceptDelay": 0,
+    "chat.checkpoints.enabled": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.tools.autoExpandFailures": true,
+    "chat.editor.wordWrap": "on",
+    "chat.notifyWindowOnConfirmation": "windowNotFocused",
+    "chat.notifyWindowOnResponseReceived": "windowNotFocused",
+    "chat.tools.terminal.enableAutoApprove": true,
+    // =========================================================================
+    //  VIM — Power-user keybindings
+    // =========================================================================
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.foldfix": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 150,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-f>": false,
+        "<C-p>": false,
+        "<C-w>": false,
+        "<C-n>": false,
+        "<C-b>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                ":w!"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                ":q!"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "x"
+            ],
+            "commands": [
+                ":x!"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.showCommands"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "T"
+            ],
+            "commands": [
+                "testing.runAll"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "commands": [
+                "testing.runAtCursor"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        }
+    ],
+    // =========================================================================
+    //  ERROR LENS
+    // =========================================================================
+    "errorLens.enabled": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ],
+    "errorLens.fontStyleItalic": true,
+    "errorLens.messageEnabled": true,
+    "errorLens.messageBackgroundMode": "message",
+    "errorLens.followCursor": "allLines",
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.gutterIconSet": "defaultOutline",
+    "errorLens.excludeBySource": [
+        "Pylance(reportMissingTypeStubs)"
+    ],
+    // =========================================================================
+    //  TODO TREE
+    // =========================================================================
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "NOTE",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "#ffffff",
+        "type": "tag",
+        "fontWeight": "bold"
+    },
+    // =========================================================================
+    //  MISC
+    // =========================================================================
+    "problems.showCurrentInStatus": true,
+    "problems.sortOrder": "severity",
+    "debug.console.fontSize": 13,
+    "debug.console.fontFamily": "'JetBrains Mono', Menlo, monospace",
+    "debug.toolBarLocation": "docked",
+    "debug.inlineValues": "auto",
+    "debug.openDebug": "openOnDebugBreak",
+    "zenMode.hideLineNumbers": false,
+    "zenMode.centerLayout": true,
+    "zenMode.fullScreen": false,
+    "telemetry.telemetryLevel": "error",
+    // Other language formatters
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": null,
+        "editor.tabSize": 2
+    },
+    // =========================================================================
+    //  MARKDOWN — Full writing & docs power
+    // =========================================================================
+    //  MARKDOWN — Obsidian-like writing experience
+    //  Requires: Foam, Markdown All in One, Markdown Preview Enhanced
+    //  Install:  see .vscode/extensions.json recommendations
+    // =========================================================================
+    "[markdown]": {
+        // ── Clean, distraction-free editor (Obsidian feel) ──
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.wrappingIndent": "same",
+        "editor.lineNumbers": "off",
+        "editor.renderWhitespace": "none",
+        "editor.glyphMargin": false,
+        "editor.folding": true,
+        "editor.lineHeight": 2.0,
+        "editor.fontSize": 15,
+        "editor.fontFamily": "'Inter', 'iA Writer Duo', 'Source Sans Pro', -apple-system, sans-serif",
+        "editor.rulers": [],
+        "editor.renderLineHighlight": "none",
+        "editor.minimap.enabled": false,
+        "editor.stickyScroll.enabled": false,
+        "editor.bracketPairColorization.enabled": false,
+        "editor.occurrencesHighlight": "off",
+        "editor.padding.top": 24,
+        "editor.padding.bottom": 24,
+        "editor.cursorBlinking": "smooth",
+        "editor.cursorStyle": "line",
+        "editor.cursorWidth": 2,
+        "editor.scrollBeyondLastLine": true,
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        // ── Suggestions & completions ──
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "on"
+        },
+        "editor.suggest.showWords": true,
+        "editor.suggest.showSnippets": true,
+        "editor.snippetSuggestions": "top",
+        "editor.acceptSuggestionOnEnter": "on",
+        // ── Formatting ──
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false,
+        "editor.defaultFormatter": "vscode.markdown-language-features"
+    },
+    // ── Built-in Markdown engine ──
+    "markdown.validate.enabled": true,
+    "markdown.validate.fileLinks.enabled": "warning",
+    "markdown.validate.fragmentLinks.enabled": "warning",
+    "markdown.validate.referenceLinks.enabled": "warning",
+    "markdown.validate.unusedLinkDefinitions.enabled": "hint",
+    "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
+    "markdown.occurrencesHighlight.enabled": true,
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+    "markdown.editor.filePaste.copyIntoWorkspace": "mediaFiles",
+    "markdown.editor.drop.copyIntoWorkspace": "mediaFiles",
+    "markdown.preview.fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.lineHeight": 1.8,
+    "markdown.preview.doubleClickToSwitchToEditor": true,
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "markdown.preview.markEditorSelection": true,
+    "markdown.preview.typographer": true,
+    "markdown.updateLinksOnFileMove.enabled": "prompt",
+    "markdown.suggest.paths.enabled": true,
+    "markdown.preferredMdPathExtensionStyle": "removeExtension",
+    // ── Foam (Obsidian-style PKM in VS Code) ──
+    // [[wiki-links]], backlinks panel, graph view, daily notes, tags
+    "foam.edit.linkReferenceDefinitions": "withExtensions",
+    "foam.openDailyNote.directory": "journal",
+    "foam.openDailyNote.filenameFormat": "yyyy-MM-dd",
+    "foam.openDailyNote.titleFormat": "dddd, MMMM Do, yyyy",
+    "foam.graph.style": {
+        "background": "#1e1e2e",
+        "node": {
+            "note": "#cba6f7",
+            "placeholder": "#585b70",
+            "tag": "#a6e3a1"
+        },
+        "link": {
+            "note": "#45475a",
+            "tag": "#585b70"
+        }
+    },
+    // ── Markdown All in One ──
+    // TOC generation, table formatting, auto list continuation, keyboard shortcuts
+    "markdown.extension.toc.levels": "2..4",
+    "markdown.extension.toc.orderedList": false,
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.bold.indicator": "**",
+    "markdown.extension.italic.indicator": "*",
+    "markdown.extension.completion.respectVscodeSearchExclude": true,
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    // =========================================================================
+    //  BASH / SHELL — Linting, editing, running
+    // =========================================================================
+    "[shellscript]": {
+        "editor.defaultFormatter": null,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.rulers": [
+            80,
+            120
+        ],
+        "editor.renderWhitespace": "all",
+        "editor.suggest.showWords": true,
+        "editor.snippetSuggestions": "top",
+        "editor.wordWrap": "off",
+        "editor.formatOnSave": false,
+        "editor.semanticHighlighting.enabled": true,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": "active"
+    },
+    // File associations — treat common shell variants as shellscript
+    "files.associations": {
+        "*.cfg": "ini",
+        ".env.*": "dotenv",
+        "Pipfile": "toml",
+        "requirements*.txt": "pip-requirements",
+        ".bashrc": "shellscript",
+        ".bash_profile": "shellscript",
+        ".bash_aliases": "shellscript",
+        ".zshrc": "shellscript",
+        ".zprofile": "shellscript",
+        ".zshenv": "shellscript",
+        ".profile": "shellscript",
+        "*.sh": "shellscript",
+        "*.bash": "shellscript",
+        "*.zsh": "shellscript",
+        ".envrc": "shellscript",
+        "Makefile": "makefile"
+    }
+}
